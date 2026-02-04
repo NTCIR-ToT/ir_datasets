@@ -23,7 +23,7 @@ class NtcirToT2026Doc(NamedTuple):
 
     @staticmethod
     def _from_json(json_doc):
-        return NrcirToT2026Doc(json_doc["id"], json_doc["title"], json_doc["url"], json_doc["text"])
+        return NtcirToT2026Doc(json_doc["id"], json_doc["title"], json_doc["url"], json_doc["text"])
 
     def default_text(self):
         return self.title + " " + self.text
