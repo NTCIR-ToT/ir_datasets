@@ -60,3 +60,20 @@ class TestQueriesIter(unittest.TestCase):
         self.assertEqual("4001", actual.query_id)
         self.assertEqual(1, actual.relevance)
         self.assertEqual("1080933", actual.doc_id)
+
+    def test_first_zh_train_qrel(self):
+        actual = load_qrel_number("zh", "train", 0)
+
+        self.assertIsNotNone(actual)
+        self.assertEqual("0001", actual.query_id)
+        self.assertEqual(1, actual.relevance)
+        self.assertEqual("8173481", actual.doc_id)
+
+    def test_first_zh_dev_qrel(self):
+        actual = load_qrel_number("zh", "dev", 0)
+
+        self.assertIsNotNone(actual)
+        self.assertEqual("4001", actual.query_id)
+        self.assertEqual(1, actual.relevance)
+        self.assertEqual("1532371", actual.doc_id)
+
